@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="system">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KriptoKu • RSA Encrypt</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/utils.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="logo">₭</span>
+        <a href="rsa.html" class="brand-name">KriptoKu</a>
+      </div>
+      <div class="header-actions">
+        <a class="tab" href="rsa_keys.html">Generate Key</a>
+        <a class="tab active" href="rsa.html">RSA Algorithm</a>
+        <a class="tab" href="caesar.html">Caesar Algorithm</a>
+      </div>
+      <div class="theme-toggle">
+        <button id="theme-light" class="chip">☀️</button>
+        <button id="theme-system" class="chip">⚙️</button>
+        <button id="theme-dark" class="chip">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container grid cols-2">
+    <section class="card reveal">
+      <div class="card-head"><h3>Pengirim (Enkripsi)</h3></div>
+      <div class="card-body">
+        <label class="label">Impor Public Key (.json)
+          <input id="pubFile" class="input" type="file" accept=".json" />
+        </label>
+        <div id="pubInfo" class="small muted">Belum ada kunci.</div>
+        <label class="label">Plainteks (A-Z saja dihitung)
+          <textarea id="plain" class="input" rows="4" placeholder="HELLO INI DARI KELOMPOKNYA DAFFA"></textarea>
+        </label>
+        <div class="actions">
+          <button id="encrypt" class="btn primary">Enkripsi</button>
+        </div>
+        <label class="label">Ciphertext (angka dipisah spasi)
+          <textarea id="cipher" class="input" rows="3" readonly></textarea>
+        </label>
+        <div class="actions">
+          <button id="copyCipher" class="btn">Salin Ciphertext</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card reveal">
+      <div class="card-head">
+        <h3>Langkah</h3>
+        <div class="progressbar"><span id="prog"></span></div>
+      </div>
+      <div class="card-body steps-wrap">
+        <div id="steps" class="steps"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© <span id="year"></span> KriptoKu</footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script defer src="js/theme.js"></script>
+  <script defer src="js/helpers.js"></script>
+  <script defer src="js/rsa_encrypt.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="system">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KriptoKu • RSA Algorithm</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/utils.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="logo">₭</span>
+        <a href="index.html" class="brand-name">KriptoKu</a>
+      </div>
+      <div class="header-actions">
+        <a class="tab" href="rsa_keys.html">Generate Key</a>
+        <a class="tab active" href="rsa.html">RSA Algorithm</a>
+        <a class="tab" href="caesar.html">Caesar Algorithm</a>
+      </div>
+      <div class="theme-toggle">
+        <button id="theme-light" class="chip">☀️</button>
+        <button id="theme-system" class="chip">⚙️</button>
+        <button id="theme-dark" class="chip">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-min reveal">
+      <h1>RSA Algorithm</h1>
+      <p>Kamu pengirim atau penerima?</p>
+      <div class="choices two">
+        <a class="choice" href="rsa_encrypt.html">Saya Pengirim<br><small>Masuk ke Enkripsi</small></a>
+        <a class="choice" href="rsa_decrypt.html">Saya Penerima<br><small>Masuk ke Dekripsi</small></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© <span id="year"></span> KriptoKu</footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script defer src="js/theme.js"></script>
+  <script defer src="js/helpers.js"></script>
+</body>
+</html>

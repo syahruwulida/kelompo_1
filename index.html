@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="system">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KriptoKu • Menu</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/utils.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="logo">₭</span>
+        <span class="brand-name">KriptoKu</span>
+      </div>
+      <div class="header-actions">
+        <a class="tab" href="rsa_keys.html">Generate Key</a>
+        <a class="tab" href="rsa.html">RSA Algorithm</a>
+        <a class="tab" href="caesar.html">Caesar Algorithm</a>
+      </div>
+      <div class="theme-toggle" role="group" aria-label="Tema">
+        <button id="theme-light" class="chip" title="Tema terang">☀️</button>
+        <button id="theme-system" class="chip" title="Ikuti sistem">⚙️</button>
+        <button id="theme-dark" class="chip" title="Tema gelap">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-min reveal">
+      <h1>Menu</h1>
+      <p>Pilih fitur yang ingin kamu demo. Desain minimal, fungsi maksimal.</p>
+      <div class="choices">
+        <a class="choice" href="rsa_keys.html">Generate Key<br><small>Buat & ekspor kunci</small></a>
+        <a class="choice" href="rsa.html">RSA Algorithm<br><small>Pilih Pengirim/Penerima</small></a>
+        <a class="choice" href="caesar.html">Caesar Algorithm<br><small>Pilih Pengirim/Penerima</small></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">© <span id="year"></span> KriptoKu</footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script defer src="js/theme.js"></script>
+  <script defer src="js/helpers.js"></script>
+</body>
+</html>
